@@ -2,6 +2,8 @@
 
 专门用于去除 **Nano Banana** 水印的批量处理工具，使用 Reverse Alpha Blending 算法，本地处理保护隐私。
 
+🔗 **在线体验**：[https://banana-watermark.vercel.app/](https://banana-watermark.vercel.app/)
+
 > ⚠️ **注意**：本工具仅支持去除 Nano Banana 特定水印，不适用于其他类型的水印。
 
 ## 📸 截图预览
