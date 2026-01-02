@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式 */
+body {
+  font-family: 'Patrick Hand', cursive;
+  background-color: #fdfbf7;
+  background-image: radial-gradient(#e5e0d8 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #2d2d2d;
+  min-height: 100vh;
+}
+
+/* 手写字体类 */
+.hand-font {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.marker-font {
+  font-family: 'Kalam', cursive;
+}
+
+/* 选中文字样式 */
+::selection {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e0d8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4d;
+}
+
+/* 垂直滑块样式 */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #2d2d2d;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fdfbf7;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #ff4d4d;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: #2d2d2d; }
+  50% { border-color: #ff4d4d; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 边框宽度 */
+.border-3 {
+  border-width: 3px;
+}
+
+/* 香蕉下落动画 */
+@keyframes banana-fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-banana-fall {
+  animation: banana-fall 4s linear infinite;
+}
+
+/* 香蕉摇摆动画 */
+@keyframes banana-swing {
+  0%, 100% { transform: rotate(-15deg) translateY(0); }
+  25% { transform: rotate(15deg) translateY(-5px); }
+  50% { transform: rotate(-10deg) translateY(0); }
+  75% { transform: rotate(10deg) translateY(-3px); }
+}
+
+.animate-banana-swing {
+  animation: banana-swing 2s ease-in-out infinite;
+}
+
+/* 香蕉弹跳旋转 */
+@keyframes banana-bounce-rotate {
+  0%, 100% { 
+    transform: translateY(0) rotate(-10deg) scale(1); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(10deg) scale(1.1); 
+  }
+}
+
+.animate-banana-bounce-rotate {
+  animation: banana-bounce-rotate 1.5s ease-in-out infinite;
+}
+
+/* 香蕉飘动 */
+@keyframes banana-float-around {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -10px) rotate(5deg); }
+  50% { transform: translate(0, -15px) rotate(0deg); }
+  75% { transform: translate(-10px, -10px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-banana-float-around {
+  animation: banana-float-around 4s ease-in-out infinite;
+}
+
+/* 闪烁星星 */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.animate-twinkle {
+  animation: twinkle 1.5s ease-in-out infinite;
+}
+
+/* 脉冲放大 */
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
+
+/* 闪光效果 */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* 弹跳动画 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
